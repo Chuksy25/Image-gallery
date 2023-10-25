@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  margin: 180px 0;
+}
+
+.wrapper {
+   display: flex;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr; */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+}
+
+img {
+  width: 600px;
+  height: 700px;
+}
+
+.image-container {
+  border-bottom: 1px solid blue;
+  border-width: 10px;
+}
+
