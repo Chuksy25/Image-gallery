@@ -31,6 +31,23 @@ const App = () => {
     onHover: ({ hovering }) => {
       setHovered(hovering);
     },
+    onScroll: ({ delta: [, dy] }) => {
+      // Implementing logic for additional scroll functionality
+      setPosition((prevPosition) => [prevPosition[0], prevPosition[1] - dy]);
+    },
+    onPinch: ({ offset: [s], memo }) => {
+      // Implementing pinch gesture logic for scaling
+      const scale = memo * s;
+      setPosition((prevPosition) => [
+        prevPosition[0] * scale,
+        prevPosition[1] * scale,
+      ]);
+      return s;
+    },
+    onMove: ({ offset: [mx, my] }) => {
+      // Implementing logic for additional move functionality
+      setPosition([mx, my]);
+    },
   });
 
   return (
